@@ -1,2 +1,2 @@
-# Vanya
-Undergraduate Engineering student learning Python
+# Python coding!!
+Hi! I'm an undergraduate engineering student at Monash University learning how to code Python. These codes in my "vanyac10-fit1056-pst" are for a Music School Management System Prototype/Code. This was done for a school practical project that allows us students to code and add new ideas into the code. I have explored coding functions which are interesting and wanted to share it with you. 
