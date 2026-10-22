@@ -44,7 +44,7 @@ Ensure you have Python installed, then install the required external libraries v
 ```bash
 pip install streamlit pandas
 ```
-# PST5 - Management System
+# Management System
 
 A robust, object-oriented Python application featuring a Streamlit web GUI, JSON-based data persistence, and a comprehensive `pytest` testing suite. This system is designed to handle complex organizational workflows including role-based user management, inventory tracking, financial/donation logging, and task delegation.
 
