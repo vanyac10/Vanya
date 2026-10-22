@@ -43,3 +43,48 @@ The project strictly separates the business logic from the user interface:
 Ensure you have Python installed, then install the required external libraries via your terminal:
 ```bash
 pip install streamlit pandas
+
+
+# PST5 - Management System
+
+A robust, object-oriented Python application featuring a Streamlit web GUI, JSON-based data persistence, and a comprehensive `pytest` testing suite. This system is designed to handle complex organizational workflows including role-based user management, inventory tracking, financial/donation logging, and task delegation.
+
+## Key Features
+
+*   **Role-Based User Architecture:** Distinct user models (`AdminUser`, `StaffUser`, `DonorUser`, `VolunteerUser`, `ClientUser`) with customized access scopes and data relationships.
+*   **Security & Authentication:** Integration of `bcrypt` for secure password hashing, automatic legacy password upgrading, and strict name/password complexity validation.
+*   **Data Persistence & Backup:** Reliable JSON file storage with automated, timestamped backups to prevent data loss.
+*   **Inventory & Logistics Management:** 
+    *   Dynamic inventory tracking with minimum stock thresholds and auto-recorded transaction audit logs.
+    *   Supply assembly workflows (packing/unpacking hampers, collecting/stocking donations) with automatic stock deduction and restoration.
+*   **Task & Issue Tracking:** Assignment of tasks to volunteers, ability to take over jobs, and a complete issue-flagging and resolution system.
+*   **Client Messaging:** Built-in messaging system for clients to send, edit (with timestamp tracking), and delete messages.
+*   **Streamlit Web Dashboard:** Interactive sidebar navigation, data metric summaries, and modular GUI pages.
+*   **Extensive Unit Testing:** Over 60 isolated tests using `pytest` ensuring 100% coverage of core business logic, exception handling, and cascade deletions.
+
+## Technologies Used
+
+*   **Python 3** (Core backend logic and object-oriented models)
+*   **Streamlit** (Frontend GUI dashboard)
+*   **Pytest** (Automated unit testing suite)
+*   **Bcrypt** (Cryptographic password hashing)
+*   **JSON** (Local database storage)
+
+##Project Structure
+
+```text
+├── app/
+│   ├── FoodBank.py         # Main controller and business logic
+│   ├── inventory.py        # Stock and transaction management
+│   ├── utils.py            # Logging, backups, and data validation
+│   ├── admin.py, client.py # User role classes
+│   └── ...
+├── gui/
+│   ├── main_dashboard.py   # Streamlit app configuration and routing
+│   ├── home_page.py        # Landing page with system metrics
+│   └── ...
+├── tests/
+│   └── test_food_bank.py   # Comprehensive pytest suite
+├── data/
+│   └── data.json           # Main JSON database (auto-generated)
+└── main.py                 # Application entry point
